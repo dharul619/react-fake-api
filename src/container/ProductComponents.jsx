@@ -18,7 +18,7 @@ function ProductComponents() {
     return (
       <div key={id} className="w-96 mb-6 ">
         <Link to={`/product/${id}`}>
-          <Card className="mt-6">
+          <Card className="mt-6 max-w-sm mx-auto sm:max-w-md lg:max-w-lg">
             <CardHeader color="blue-gray" className="relative h-56">
               <img
                 src={image}
@@ -27,11 +27,21 @@ function ProductComponents() {
               />
             </CardHeader>
             <CardBody className="h-56">
-              <Typography variant="h5" color="blue-gray" className="mb-2">
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="mb-2 text-center sm:text-left"
+              >
                 {title}
               </Typography>
-              <Typography className="text-gray-600 mb-2">{category}</Typography>
-              <Typography variant="h6" color="blue-gray" className="font-bold">
+              <Typography className="text-gray-600 mb-2 text-center sm:text-left">
+                {category}
+              </Typography>
+              <Typography
+                variant="h6"
+                color="blue-gray"
+                className="font-bold text-center sm:text-left"
+              >
                 $ {price}
               </Typography>
             </CardBody>
